@@ -123,4 +123,13 @@ body {
   color: var(--primary);
 }
 
+.modal {
+  background-color: var(--light);
+  border-radius: var(--size-3);
+  border: none;
+  padding: var(--rem-1);
+  width: 80%;
+  max-width: 40rem;
+}
+
 
