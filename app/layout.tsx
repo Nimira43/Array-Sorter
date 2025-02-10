@@ -8,8 +8,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'CodeScribe',
-  description: 'Note taking markdown app - using Next JS and Postgres',
+  title: 'Blab',
+  description: 'Blogging platform - using Next JS and MongoDB',
 }
 
 export default function RootLayout({
