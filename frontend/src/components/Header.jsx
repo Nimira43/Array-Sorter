@@ -1,10 +1,10 @@
-import logo from '../images/logo-image.png'
+import logo from '../images/logo2.png'
 
 export default function Header() {
   return (
     <header className='main-header'>
       <div className='title'>
-        {/* <img src={logo} alt="Logo" /> */}
+        <img src={logo} alt="Logo" />
         <h1 className='logo'>Lassen's</h1>
       </div>
       <nav>
