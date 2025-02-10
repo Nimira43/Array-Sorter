@@ -19,14 +19,6 @@ app.get('/meals', async (req, res) => {
   res.json(JSON.parse(meals))
 })
 
-app.use((req, res) => {
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200)
-  }
-
-  res.status(404).json({ message: 'Page Not Found'})
-})
-
 app.post('/orders', async (req, res) => {
   const orderData = req.body.order
 
@@ -57,6 +49,25 @@ app.post('/orders', async (req, res) => {
         'Ensure that all fields are filled in.'
     })
   }
+
+  const newOrder = {
+    ...orderData,
+    id: (Math.random() * 1000).toString(),
+  }
+  const orders = await fs.readFile('./data/orders.json', 'utf8')
+  const allOrders = JSON.parse(orders)
+  allOrders.push(newOrder)
+
+  await fs.writeFile('./data/orders.json', JSON.stringify(allOrders))
+  res.status(201).json({ message: 'Order Created.'})
+})
+
+app.use((req, res) => {
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200)
+  }
+
+  res.status(404).json({ message: 'Page Not Found'})
 })
 
 app.listen(3000)
