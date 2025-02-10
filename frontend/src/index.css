@@ -80,6 +80,7 @@ body {
   border-radius: var(--size-3);
   transition: var(--transition);
   cursor: pointer;
+  outline: none;
 }
 
 .btn-light:hover,
@@ -87,3 +88,37 @@ body {
   background-color: var(--transparent);
   color: var(--primary-dark);
 }
+
+.btn-text {
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  color: var(--gold);
+  transition: var(--transition);
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-text:hover,
+.btn-text:active {
+  color: var(--light);
+}
+
+.btn-text-light {
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-dark);
+  transition: var(--transition);
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-text-light:hover,
+.btn-text-light:active {
+  color: var(--primary);
+}
+
+
