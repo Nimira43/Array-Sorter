@@ -1,7 +1,9 @@
+import Header from './components/Header'
+
 function App() {
   return (
     <div>
-      <h1>Lassen's</h1>      
+      <Header />
     </div>
   )
 }
