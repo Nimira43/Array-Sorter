@@ -27,4 +27,17 @@ app.use((req, res) => {
   res.status(404).json({ message: 'Page Not Found'})
 })
 
+app.post('/orders', async (req, res) => {
+  const orderData = req.body.order
+
+  if (orderData === null ||
+    orderData.items === null ||
+    orderData.items.length === 0
+  ) {
+    return res
+      .status(400)
+      .json({ message: 'Missing Data.'})
+  }
+})
+
 app.listen(3000)
