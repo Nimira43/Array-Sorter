@@ -2,7 +2,7 @@ export default function Header() {
   return (
     <header>
       <div>
-        <h1>Lassen's</h1>
+        <h1 className='logo'>Lassen's</h1>
       </div>
       <nav>
         <button>Cart</button>
